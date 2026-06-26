@@ -1,0 +1,263 @@
+[
+  {
+    "id": "the-cat-cafe",
+    "name": "The Cat Cafe",
+    "address": "302, Island Avenue, Asian Pacific Thematic Historic District, Gaslamp Quarter, Banker's Hill, San Diego, San Diego County, California, 92101, United States",
+    "neighborhood": "Banker's Hill",
+    "mapNumber": 1,
+    "region": "north",
+    "mapCoords": {
+      "x": 0.758,
+      "y": 0.855
+    },
+    "coordinatePolicy": "WGS84 coordinates from Nominatim manual seed; map rendered by map-creator/OSMnx.",
+    "pinSource": "imported",
+    "poi": {
+      "input_name": "The Cat Cafe",
+      "resolved_name": "The Cat Cafe",
+      "source": "nominatim_manual_seed",
+      "poi_id": "9215079112",
+      "address": "The Cat Cafe, 302, Island Avenue, Asian Pacific Thematic Historic District, Gaslamp Quarter, Banker's Hill, San Diego, San Diego County, California, 92101, United States",
+      "province": "California",
+      "city": "San Diego",
+      "district": "Banker's Hill",
+      "type": "cafe",
+      "typecode": "amenity",
+      "lng_gcj02": null,
+      "lat_gcj02": null,
+      "lng_wgs84": -117.1615788,
+      "lat_wgs84": 32.7106008,
+      "confidence": 0.00007728007934686836,
+      "status": "resolved",
+      "needs_review": false,
+      "candidates": []
+    },
+    "geoReview": {
+      "input_name": "The Cat Cafe",
+      "status": "ok",
+      "in_frame": true,
+      "city_bounds_ok": true,
+      "issues": []
+    },
+    "photos": [],
+    "review": "A downtown cat cafe stop with a classic check-in feel: easy to find, close to the Gaslamp Quarter, and good for a first field-guide entry.",
+    "ratings": {
+      "comfort": 4,
+      "catFriendliness": 4,
+      "photoFriendly": 4
+    },
+    "reservationNote": "Check current visit rules before going; timed visits may apply.",
+    "priceNote": "Entry and drink policies may change, so verify on the cafe site before visiting.",
+    "environmentNote": "Urban storefront energy with a simple cafe rhythm and adoptable-cat atmosphere.",
+    "photoNote": "Good for storefront, table, and resident-cat snapshots if the room is calm.",
+    "visitTips": "Best as the downtown starting point before moving north on the map.",
+    "cats": [
+      {
+        "id": "miso-1-1",
+        "name": "Miso",
+        "photos": [],
+        "tags": [
+          "gentle",
+          "window spot",
+          "quiet host"
+        ],
+        "review": "Usually claims the calmest corner and makes the visit feel properly supervised.",
+        "ratings": {
+          "friendly": 4,
+          "active": 3,
+          "photogenic": 4
+        }
+      },
+      {
+        "id": "button-1-2",
+        "name": "Button",
+        "photos": [],
+        "tags": [
+          "curious",
+          "toy chaser",
+          "photo friendly"
+        ],
+        "review": "Small, fast, and very sure that every ribbon toy has been placed there personally.",
+        "ratings": {
+          "friendly": 5,
+          "active": 4,
+          "photogenic": 4
+        }
+      }
+    ]
+  },
+  {
+    "id": "whiskers-and-wine-bar",
+    "name": "Whiskers & Wine Bar",
+    "address": "2856, Adams Avenue, North Park, San Diego, San Diego County, California, 92116, United States",
+    "neighborhood": "North Park",
+    "mapNumber": 2,
+    "region": "north",
+    "mapCoords": {
+      "x": 0.86,
+      "y": 0.57
+    },
+    "coordinatePolicy": "WGS84 coordinates from Nominatim manual seed; map rendered by map-creator/OSMnx.",
+    "pinSource": "imported",
+    "poi": {
+      "input_name": "Whiskers & Wine Bar",
+      "resolved_name": "Whiskers and Wine Bar",
+      "source": "nominatim_manual_seed",
+      "poi_id": "12230395438",
+      "address": "Whiskers and Wine Bar, 2856, Adams Avenue, North Park, San Diego, San Diego County, California, 92116, United States",
+      "province": "California",
+      "city": "San Diego",
+      "district": "North Park",
+      "type": "cafe",
+      "typecode": "amenity",
+      "lng_gcj02": null,
+      "lat_gcj02": null,
+      "lng_wgs84": -117.1322865,
+      "lat_wgs84": 32.7630179,
+      "confidence": 0.00007728007934686836,
+      "status": "resolved",
+      "needs_review": false,
+      "candidates": []
+    },
+    "geoReview": {
+      "input_name": "Whiskers & Wine Bar",
+      "status": "ok",
+      "in_frame": true,
+      "city_bounds_ok": true,
+      "issues": []
+    },
+    "photos": [],
+    "review": "A North Park cat lounge entry with a more social evening mood, useful for a field guide that tracks both cats and hangout atmosphere.",
+    "ratings": {
+      "comfort": 5,
+      "catFriendliness": 4,
+      "photoFriendly": 5
+    },
+    "reservationNote": "Reserve ahead for busy evenings and weekend windows.",
+    "priceNote": "Expect lounge-style pricing; confirm current packages before visiting.",
+    "environmentNote": "Warmer and more social than a quiet cafe stop, with a neighborhood-night-out feeling.",
+    "photoNote": "Good for cozy table photos, lounge details, and cats moving through the room.",
+    "visitTips": "Works well as the most social stop in the guide.",
+    "cats": [
+      {
+        "id": "olive-2-1",
+        "name": "Olive",
+        "photos": [],
+        "tags": [
+          "social",
+          "table patrol",
+          "confident"
+        ],
+        "review": "The unofficial host, usually checking whether each guest has understood the room rules.",
+        "ratings": {
+          "friendly": 4,
+          "active": 3,
+          "photogenic": 4
+        }
+      },
+      {
+        "id": "juniper-2-2",
+        "name": "Juniper",
+        "photos": [],
+        "tags": [
+          "lounger",
+          "soft eyes",
+          "calm"
+        ],
+        "review": "A slower companion who makes the space feel less like a bar and more like a living room.",
+        "ratings": {
+          "friendly": 5,
+          "active": 4,
+          "photogenic": 4
+        }
+      }
+    ]
+  },
+  {
+    "id": "the-cat-lounge",
+    "name": "The Cat Lounge",
+    "address": "1006, Torrey Pines Road, Village of La Jolla, La Jolla, San Diego, San Diego County, California, 92037, United States",
+    "neighborhood": "La Jolla",
+    "mapNumber": 3,
+    "region": "north",
+    "mapCoords": {
+      "x": 0.383,
+      "y": 0.141
+    },
+    "coordinatePolicy": "WGS84 coordinates from Nominatim manual seed; map rendered by map-creator/OSMnx.",
+    "pinSource": "imported",
+    "poi": {
+      "input_name": "The Cat Lounge",
+      "resolved_name": "The Cat Lounge Rescue and Adoption Center",
+      "source": "nominatim_manual_seed",
+      "poi_id": "1388121433",
+      "address": "The Cat Lounge Rescue and Adoption Center, 1006, Torrey Pines Road, Village of La Jolla, La Jolla, San Diego, San Diego County, California, 92037, United States",
+      "province": "California",
+      "city": "San Diego",
+      "district": "La Jolla",
+      "type": "animal_shelter",
+      "typecode": "amenity",
+      "lng_gcj02": null,
+      "lat_gcj02": null,
+      "lng_wgs84": -117.2726996,
+      "lat_wgs84": 32.8424088,
+      "confidence": 0.00007728007934686836,
+      "status": "resolved",
+      "needs_review": false,
+      "candidates": []
+    },
+    "geoReview": {
+      "input_name": "The Cat Lounge",
+      "status": "ok",
+      "in_frame": true,
+      "city_bounds_ok": true,
+      "issues": []
+    },
+    "photos": [],
+    "review": "A La Jolla rescue and adoption lounge that belongs in the guide as a cat-first destination rather than only a cafe stop.",
+    "ratings": {
+      "comfort": 4,
+      "catFriendliness": 5,
+      "photoFriendly": 4
+    },
+    "reservationNote": "Review adoption-lounge visit rules before arrival.",
+    "priceNote": "Check current donation, entry, or booking expectations before visiting.",
+    "environmentNote": "Rescue-lounge focused, calmer and more cat-centered than a typical coffee stop.",
+    "photoNote": "Best for gentle portraits and quiet resident-cat moments.",
+    "visitTips": "Treat this as the north-coast chapter of the map route.",
+    "cats": [
+      {
+        "id": "maple-3-1",
+        "name": "Maple",
+        "photos": [],
+        "tags": [
+          "gentle",
+          "lap candidate",
+          "slow blink"
+        ],
+        "review": "A calm lounge presence who rewards patience more than speed.",
+        "ratings": {
+          "friendly": 4,
+          "active": 3,
+          "photogenic": 4
+        }
+      },
+      {
+        "id": "pepper-3-2",
+        "name": "Pepper",
+        "photos": [],
+        "tags": [
+          "watchful",
+          "high perch",
+          "independent"
+        ],
+        "review": "Prefers a good vantage point and may join only after deciding the room is acceptable.",
+        "ratings": {
+          "friendly": 5,
+          "active": 4,
+          "photogenic": 4
+        }
+      }
+    ]
+  }
+]
