@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #F5EBD6;
+    color: #3A2415;
+    font-family: 'Nunito', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .input {
+    width: 100%;
+    border-radius: 0.125rem;
+    border: 1px solid rgb(58 36 21 / 0.1);
+    background-color: rgb(58 36 21 / 0.05);
+    padding: 0.5rem 0.75rem;
+    font-family: Nunito, system-ui, sans-serif;
+    font-size: 1rem;
+    color: #3A2415;
+    outline: none;
+  }
+
+  .input:focus {
+    border-color: #B86A47;
+  }
+
+  .bg-texture {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  }
+
+  .page-section {
+    min-height: 100vh;
+    position: relative;
+  }
+}
