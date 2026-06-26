@@ -1,0 +1,199 @@
+.book {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* backdrop variants */
+.book--backdrop-dark {
+  background-color: #FFF9ED;
+}
+
+.book--backdrop-desk {
+  /* darker wood-toned surface */
+  background-color: #8B6340;
+  background-image:
+    radial-gradient(ellipse at 30% 20%, rgba(200, 160, 100, 0.25) 0%, rgba(0, 0, 0, 0) 55%),
+    radial-gradient(ellipse at 70% 80%, rgba(50, 30, 10, 0.35) 0%, rgba(0, 0, 0, 0) 50%),
+    repeating-linear-gradient(100deg, rgba(255, 255, 255, 0.03) 0px, rgba(255, 255, 255, 0.03) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px);
+}
+
+.book--backdrop-cream {
+  /* pale parchment */
+  background-color: #E8DCC2;
+  background-image: radial-gradient(ellipse at center, rgba(58, 36, 21, 0.03) 0%, rgba(58, 36, 21, 0.10) 100%);
+}
+
+/* stage + magazine */
+.book-stage {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.magazine {
+  position: relative;
+  width: min(90vw, calc(90vh * 16 / 9));
+  aspect-ratio: 16 / 9;
+  perspective: 2500px;
+  pointer-events: auto;
+  box-shadow:
+    0 40px 60px -20px rgba(0, 0, 0, 0.45),
+    0 20px 30px -15px rgba(0, 0, 0, 0.3);
+}
+
+.book--backdrop-cream .magazine {
+  box-shadow:
+    0 30px 50px -18px rgba(58, 36, 21, 0.35),
+    0 10px 20px -10px rgba(58, 36, 21, 0.25);
+  outline: 1px solid rgba(58, 36, 21, 0.12);
+}
+
+.book-page {
+  position: absolute;
+  inset: 0;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  transition: transform 850ms cubic-bezier(0.55, 0.05, 0.25, 1);
+  will-change: transform;
+}
+
+.book-page--flipped {
+  transform: rotateY(-180deg);
+  pointer-events: none;
+}
+
+.book-page__face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.book-page__face--front {
+  background-color: #F5EBD6;
+}
+
+.book-page__face--back {
+  transform: rotateY(180deg);
+  background-color: transparent;
+}
+
+/* face shade and cast shadow removed per user preference */
+.book-page__face-shade { display: none; }
+.book-cast-shadow { display: none; }
+
+/* nav / indicator
+ * Click zones live ONLY in the empty margin to the left/right of the magazine,
+ * never overlapping it — so the map / cards stay fully interactive. The
+ * magazine is `min(90vw, 90vh * 16/9)` wide, so each side margin is
+ * `(100vw - that) / 2`. We cap the zones at that width.
+ */
+.book-nav {
+  position: absolute;
+  top: 50%;
+  width: 3.25rem;
+  height: 8rem;
+  transform: translateY(-50%);
+  z-index: 9999;
+  background: #F5EBD6;
+  border: 1px solid rgba(58, 36, 21, 0.24);
+  border-radius: 999px;
+  box-shadow:
+    8px 10px 18px rgba(58, 36, 21, 0.18),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.75),
+    inset -3px -4px 7px rgba(58, 36, 21, 0.18);
+  padding: 0;
+  opacity: 0.92;
+  transition: transform 160ms ease, opacity 160ms ease, box-shadow 160ms ease;
+}
+
+.book-nav::after {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #3A2415;
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.book-nav--prev { left: 1.35rem; cursor: w-resize; }
+.book-nav--prev::after { content: '←'; }
+.book-nav--next { right: 1.35rem; cursor: e-resize; }
+.book-nav--next::after { content: '→'; }
+.book-nav:hover:not(:disabled) {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.04);
+  box-shadow:
+    10px 14px 22px rgba(58, 36, 21, 0.22),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.75),
+    inset -3px -4px 7px rgba(58, 36, 21, 0.18);
+}
+.book-nav:disabled { cursor: default; opacity: 0.25; }
+
+.book-indicator {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  color: #A67A4E;
+  pointer-events: none;
+}
+
+.book--backdrop-cream .book-indicator { color: #3A2415; opacity: 0.6; }
+
+.book-hint {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.5rem;
+  z-index: 9999;
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.25em;
+  color: #A67A4E;
+  text-transform: uppercase;
+  pointer-events: none;
+  opacity: 0.7;
+  animation: book-hint-pulse 2.4s ease-in-out infinite;
+}
+.book-hint--prev { right: auto; left: 1.5rem; }
+
+.book-hint--button {
+  pointer-events: auto;
+  border: 1px solid rgba(58, 36, 21, 0.22);
+  background: #F5EBD6;
+  color: #3A2415;
+  padding: 0.85rem 1rem;
+  border-radius: 999px;
+  box-shadow:
+    6px 8px 16px rgba(58, 36, 21, 0.18),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.8),
+    inset -3px -4px 7px rgba(58, 36, 21, 0.16);
+}
+
+.book--backdrop-cream .book-hint { color: #3A2415; }
+
+@keyframes book-hint-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.9; }
+}
+
+.book-admin-toolbar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10000;
+  display: flex;
+  gap: 0.5rem;
+}
